@@ -12,7 +12,7 @@
         imggrass.src = "Images/grass1.png";
 
         const tree = new Image();
-        tree.src = "Images/Tree.png";
+        tree.src = "Images/tree.png";
         // const rosegrass = new Image();
        //car oposite 
        const cartblack=new Image();
@@ -302,4 +302,5 @@
                 document.getElementById("game_over_popup").style.display="block";
                 document.getElementById("crowfly").style.display="none";
                 document.getElementById("gameover").innerText="💥 Crash! Game Over "+'score:'+score;
+
             }
