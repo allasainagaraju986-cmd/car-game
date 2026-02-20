@@ -63,48 +63,37 @@
 
 
         // redraw everything
-        function draw() {
-            ctx.clearRect(0,0,canvas.width,canvas.height);//clear canvas
-            ctx.drawImage(city,30,50,650,150);
-            
-            ctx.drawImage(tree,1,80,120,150);
-            ctx.drawImage(tree,700,80,120,150);//x,y,width,height
-            ctx.drawImage(imggrass,1,170,900,45);
-            
-            ctx.drawImage(road,1,210,900,130);
-            ctx.drawImage(cartw,cartwx,cartwy,100,50);
-            
-            ctx.drawImage(car4,car4x,car4y,100,50);
-            ctx.drawImage(cartblack,cartblackx,cartblacky,100,50);
-            ctx.drawImage(car3,car3x,car3y,100,50);
-            ctx.drawImage(car, car1x, car1y, 100, 50); // x, y, width, height
-            
-            ctx.drawImage(imggrass,2,310,900,50);
-            
-        }
+function draw() {
 
-         // --- Ensure all images are loaded before drawing ---
-        let loadedCount = 0;
-        const totalImages = 9; // car + (2,3,4)+ grass + road + tree 
+    if (
+        !car.complete ||
+        !cartblack.complete ||
+        !car3.complete ||
+        !car4.complete ||
+        !cartw.complete ||
+        !imggrass.complete ||
+        !tree.complete ||
+        !road.complete ||
+        !city.complete
+    ){
+        return;
+    }
 
-        function checkLoaded() {
-            loadedCount++;
-            if (loadedCount === totalImages) {
-                draw(); // draw only when all images are ready
-            }
-        }
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(city,30,50,650,150);
+    ctx.drawImage(tree,1,80,120,150);
+    ctx.drawImage(tree,700,80,120,150);
+    ctx.drawImage(imggrass,1,170,900,45);
+    ctx.drawImage(road,1,210,900,130);
+    ctx.drawImage(cartw,cartwx,cartwy,100,50);
+    ctx.drawImage(car4,car4x,car4y,100,50);
+    ctx.drawImage(cartblack,cartblackx,cartblacky,100,50);
+    ctx.drawImage(car3,car3x,car3y,100,50);
+    ctx.drawImage(car, car1x, car1y, 100, 50);
+    ctx.drawImage(imggrass,2,310,900,50);
+}
 
-        // Attach load events
-        car.onload = checkLoaded;
-        cartblack.onload = checkLoaded;
-        car3.onload = checkLoaded;
-        car4.onload = checkLoaded;
-        cartw.onload = checkLoaded;
-        imggrass.onload = checkLoaded;
-        tree.onload = checkLoaded;
-        road.onload = checkLoaded;
-        city.onload=checkLoaded;
-
+     
         //move mycar
         function btn_up(){ 
             if (car1y > 230) {  // prevent going above road
@@ -304,3 +293,4 @@
                 document.getElementById("gameover").innerText="💥 Crash! Game Over "+'score:'+score;
 
             }
+
