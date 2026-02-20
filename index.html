@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Game</title>
+        <link rel="stylesheet" href="style.css">
+    </Head>
+    <body>
+        <div id="game_window">
+            <h3 style="text-align: center;padding-top: 20px; color: rgb(245, 245, 244);">Welcome...</h3>
+            <div id="game_window_canvas">
+                <div id="score">
+                    <label>Score:</label><input type="text" id="scorein" value="0">
+                </div>
+                
+                <img  id="home" src="Images/bg_cars2.jpg" >
+                <div id="crowfly"></div>
+                <canvas id="game_window_layer" width="850" height="400"></canvas>
+                <div id="game_over_popup">
+                    <div id="game_over_popup_lo">
+                        <div>
+                            <p id="gameover"></p>
+                        </div>
+                        
+                        <div id="game_over_popup_btns">
+                            <button id="restart" onclick="restartn()">Restart</button>
+                            <button id="btn_home" onclick="btn_home()">Home</button>
+                        </div>
+                    </div>      
+                </div>
+                
+                <button id="startgame" onclick="startgame()">Start</button>
+                
+            <button id="btn_up" onclick="btn_up()"> Up &#8593;</button>
+            <button id="btn_left" onclick="btn_left()">Left &#8592;</button>
+            <button id="btn_down" onclick="btn_down()">Down &#8595;</button>
+            <button id="btn_right" onclick="btn_right()">Right  &#8594;</button>
+                
+            </div>
+        </div>
+
+       <script src="script.js"></script>
+    </body>
+</html>

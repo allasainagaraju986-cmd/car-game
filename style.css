@@ -1,0 +1,201 @@
+body{
+    background-color: rgba(27, 182, 234, 0.628);
+}
+#game_window{
+    width: 100%;
+    height: 600px;
+    background-color: rgba(41, 226, 204, 0.379);
+    justify-items: center;
+}
+            #game_window_canvas{
+                width: 900px;
+                height: 450px;
+                background-color: #d6fbb085;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            #game_window_layer{
+                /* background-color: skyblue; */
+                background:linear-gradient(skyblue,rgb(28, 144, 28));
+            }
+            #score{
+                width: 80px;
+                height: 20px;
+                border: none;
+                background-color: orangered;
+                border-radius: 3px;
+                position: absolute;
+                top: 130px;
+                color: #fff;
+                padding: 8px 15px;
+            }input{
+                width: 30px;
+                border: 1px solid skyblue;
+                background-color: skyblue;
+                border-radius: 3px;
+                padding-left: 2px;
+                color: gray;
+            }
+            
+/*-----------------------------game popup ---------------------------------------*/
+            #game_over_popup{
+                height: 200px;
+                width: 250px;
+                display: none;
+                background-image: url(Images/bg_cars3.avif);
+                background-size: contain;
+                border-radius: 20px;
+                position: absolute;
+                justify-items: center;
+                align-content: center;
+                
+                }
+            #game_over_popup_lo{
+                width: 210px;
+                height: 180px;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                /* top: 20px; */
+            }    
+            #game_over_popup_btns{
+                display: flex;
+                flex-direction: row;
+            }
+            #gameover{
+                display: block;
+                font-size: 20px;
+                font-style: oblique;
+                padding: 5px 0;
+                color: whitesmoke;
+                width: 200px;
+                text-align: center;
+               
+            }
+            #restart {
+                display: block; /* hidden by default */
+                width: 70px;
+                height: 30px;
+                background: transparent;
+                border-radius: 3px;
+                border: 2px solid rgb(14, 234, 250);
+                margin-right: 15px;
+                color: rgb(0, 200, 255);
+                font-size: 15px;   
+                cursor: pointer;
+                transition: all 0.3s ease; /* smooth animation */
+            }
+            #restart:hover{
+                background-color: rgb(14, 234, 250);
+                transform: scale(1.05); /* slightly bigger */
+                color: whitesmoke;
+            }
+            #btn_home{
+                display: block; /* hidden by default */
+                width: 70px;
+                height: 30px;
+                background: transparent;
+                border-radius: 3px;
+                border: 2px solid rgb(14, 234, 250);
+                color: rgb(0, 200, 255);
+                font-size: 15px; 
+                cursor: pointer;
+                transition: all 0.3s ease; /* smooth animation */
+            }
+            #btn_home:hover{
+                background-color: rgb(14, 234, 250);
+                transform: scale(1.05); /* slightly bigger */
+                color: whitesmoke;
+            }
+/*-----------------------------game popup ends-----------------------------------------------*/
+            #startgame{
+                position: absolute;
+                margin-bottom: -170px;
+                border: none;
+                background-color: orangered;
+                border-radius: 10px;
+                font-size: 30px;
+                font-family:sans-serif;
+                color: rgb(7, 7, 131);
+                width: 100px;
+                height: 30px;
+                padding: 5px 2px;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease; /* smooth animation */
+            }
+            #startgame:hover{
+                background-color: rgb(14, 234, 250);
+                transform: scale(1.10); /* slightly bigger */
+            }
+            #btn_left,#btn_right,#btn_up,#btn_down{
+                width: 70px;
+                height: 30px;
+                background-color: orange;
+                border-radius: 3px;
+                border: none;
+                color: whitesmoke;
+            }
+            
+            #btn_left{
+                position: absolute;
+                margin-bottom: -360px;
+                margin-left: -590px;
+                display: none;/*hide button on click start then only open*/
+            }
+            #btn_right{
+                position: absolute;
+                margin-bottom: -360px;
+                margin-left: -750px;
+                display: none;/*hide button on click start then only open*/
+            }  
+            #btn_up{
+                position: absolute;
+                margin-bottom: -360px;
+                margin-left: 750px;
+                display: none;/*hide button on click start then only open*/
+            }
+            #btn_down{
+                position: absolute;
+                margin-bottom: -360px;
+                margin-left: 590px;
+                display: none;/*hide button on click start then only open*/
+            }
+            #home{
+                width: 850px;
+                height: 400px;
+                position: absolute;
+            }
+/*----------------------------crow fly start----------------------------------------------------------*/
+
+            /* crow flying animation */
+            #crowfly{
+                width: 150px;
+                height: 170px;
+                display: none;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 150px;
+                background-position: center;
+                background-color: transparent;
+                animation: crowfly 2.5s ease-in-out infinite;
+            }
+            
+            @keyframes crowfly {
+                0% { background-image: url("/Images/crow1.png");}
+                20% { background-image: url("/Images/crow2.png");}
+                30% { background-image: url("/Images/crow3.png");}
+                40% { background-image: url("/Images/crow4.png");}
+                50% { background-image: url("/Images/crow5.png");}
+                60% { background-image: url("/Images/crow6.png");}
+                70% { background-image: url("/Images/crow4.png");}
+                80% { background-image: url("/Images/crow7.png");}
+                90% { background-image: url("/Images/crow2.png");}
+                100% { background-image: url("/Images/crow1.png");}
+            }
+/*----------------------------crow fly end----------------------------------------------------------*/
