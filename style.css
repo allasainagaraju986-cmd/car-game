@@ -187,15 +187,16 @@ body{
             }
             
             @keyframes crowfly {
-                0% { background-image: url("/Images/crow1.png");}
-                20% { background-image: url("/Images/crow2.png");}
-                30% { background-image: url("/Images/crow3.png");}
-                40% { background-image: url("/Images/crow4.png");}
-                50% { background-image: url("/Images/crow5.png");}
-                60% { background-image: url("/Images/crow6.png");}
-                70% { background-image: url("/Images/crow4.png");}
-                80% { background-image: url("/Images/crow7.png");}
-                90% { background-image: url("/Images/crow2.png");}
-                100% { background-image: url("/Images/crow1.png");}
+                0% { background-image: url("Images/crow1.png");}
+                20% { background-image: url("Images/crow2.png");}
+                30% { background-image: url("Images/crow3.png");}
+                40% { background-image: url("Images/crow4.png");}
+                50% { background-image: url("Images/crow5.png");}
+                60% { background-image: url("Images/crow6.png");}
+                70% { background-image: url("Images/crow4.png");}
+                80% { background-image: url("Images/crow7.png");}
+                90% { background-image: url("Images/crow2.png");}
+                100% { background-image: url("Images/crow1.png");}
             }
+
 /*----------------------------crow fly end----------------------------------------------------------*/
